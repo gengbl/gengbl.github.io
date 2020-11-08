@@ -1,6 +1,6 @@
 ---
-title: Tags
-type: tags
+title: Event
+type: event
 # All the Tags of posts.
 # v2.0
 # https://github.com/cotes2020/jekyll-theme-chirpy
