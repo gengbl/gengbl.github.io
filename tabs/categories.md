@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: 产品列表
 type: categories
 # All the Categories of posts
 # v2.0

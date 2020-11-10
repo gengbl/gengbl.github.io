@@ -13,10 +13,10 @@
 set -eu
 
 TYPE_CATEGORY=0
-TYPE_TAG=1
+TYPE_EVENT=1
 
 category_count=0
-tag_count=0
+event_count=0
 
 _read_yaml() {
   local _endline="$(grep -n "\-\-\-" "$1" | cut -d: -f 1 | sed -n '2p')"
@@ -35,15 +35,15 @@ read_categories() {
   fi
 }
 
-read_tags() {
+read_events() {
   local _yaml="$(_read_yaml "$1")"
-  local _tags="$(echo "$_yaml" | yq r - "tags.*")"
-  local _tag="$(echo "$_yaml" | yq r - "tag")"
+  local _events="$(echo "$_yaml" | yq r - "events.*")"
+  local _event="$(echo "$_yaml" | yq r - "event")"
 
-  if [[ -n $_tags ]]; then
-    echo "$_tags"
-  elif [[ -n $_tag ]]; then
-    echo "$_tag"
+  if [[ -n $_events ]]; then
+    echo "$_events"
+  elif [[ -n $_event ]]; then
+    echo "$_event"
   fi
 }
 
@@ -53,15 +53,15 @@ init() {
     rm -rf categories
   fi
 
-  if [[ -d tags ]]; then
-    rm -rf tags
+  if [[ -d events ]]; then
+    rm -rf events
   fi
 
   if [[ ! -d _posts ]]; then
     exit 0
   fi
 
-  mkdir categories tags
+  mkdir categories events
 }
 
 create_category() {
@@ -81,26 +81,26 @@ create_category() {
   fi
 }
 
-create_tag() {
+create_event() {
   if [[ -n $1 ]]; then
     local _name=$1
-    local _filepath="tags/$(echo "$_name" | sed "s/ /-/g;s/'//g" | awk '{print tolower($0)}').html"
+    local _filepath="events/$(echo "$_name" | sed "s/ /-/g;s/'//g" | awk '{print tolower($0)}').html"
 
     if [[ ! -f $_filepath ]]; then
 
       echo "---" > "$_filepath"
-      echo "layout: tag" >> "$_filepath"
+      echo "layout: event" >> "$_filepath"
       echo "title: $_name" >> "$_filepath"
-      echo "tag: $_name" >> "$_filepath"
+      echo "event: $_name" >> "$_filepath"
       echo "---" >> "$_filepath"
 
-      ((tag_count = tag_count + 1))
+      ((event_count = event_count + 1))
     fi
   fi
 }
 
 #########################################
-# Create HTML pages for Categories/Tags.
+# Create HTML pages for Categories/Events.
 # Arguments:
 #   $1 - an array string
 #   $2 - type specified option
@@ -120,9 +120,9 @@ create_pages() {
         done
         ;;
 
-      $TYPE_TAG)
+      $TYPE_EVENT)
         for i in $_string; do
-          create_tag "$i"
+          create_event "$i"
         done
         ;;
 
@@ -141,18 +141,18 @@ main() {
 
   for _file in $(find "_posts" -type f \( -iname \*.md -o -iname \*.markdown \)); do
     local _categories=$(read_categories "$_file")
-    local _tags=$(read_tags "$_file")
+    local _events=$(read_events "$_file")
 
     create_pages "$_categories" $TYPE_CATEGORY
-    create_pages "$_tags" $TYPE_TAG
+    create_pages "$_events" $TYPE_EVENT
   done
 
   if [[ $category_count -gt 0 ]]; then
     echo "[INFO] Succeed! $category_count category-pages created."
   fi
 
-  if [[ $tag_count -gt 0 ]]; then
-    echo "[INFO] Succeed! $tag_count tag-pages created."
+  if [[ $event_count -gt 0 ]]; then
+    echo "[INFO] Succeed! $event_count event-pages created."
   fi
 }
 

@@ -10,7 +10,7 @@
 
 title: 墨行科技                          # the main title
 
-tagline: 北京墨行科技有限公司.  # it will display as the sub-title
+tagline: 北京墨行科技有限公司.             # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
@@ -25,10 +25,10 @@ author: admin                  # change to your full name
 avatar: /assets/img/company/logo.jpg   # support internet resources
 
 github:
-  username: github_username             # change to your github username
+  username: gengbl             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: twitter            # change to your twitter username
 
 social:
   name: 北京墨行科技有限公司                  # it will shows as the copyright owner in Footer
@@ -126,17 +126,17 @@ defaults:
       comments: false
   -
     scope:
-      path: tags
+      path: events
     values:
-      tab_active: Tags
-      location: Tag
+      tab_active: Events
+      location: event 
       breadcrumb:
         -
           label: Home
           url: /
         -
-          label: Tags
-          url: /tabs/tags/
+          label: Events 
+          url: /tabs/events/
   -
     scope:
       path: categories
@@ -191,7 +191,7 @@ sitemap_exclude:  # Sitemap will exclude the following items.
     - /norobots/
     - /tabs/
     - /categories/
-    - /tags/
+    - /events/
     - /posts/
     - 404.html
     - feed.xml

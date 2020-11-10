@@ -14,11 +14,11 @@ const include = [
 
   '{{ "/assets/css/home.css" | relative_url }}',
   '{{ "/assets/css/categories.css" | relative_url }}',
-  '{{ "/assets/css/tags.css" | relative_url }}',
+  '{{ "/assets/css/events.css" | relative_url }}',
   '{{ "/assets/css/archives.css" | relative_url }}',
   '{{ "/assets/css/page.css" | relative_url }}',
   '{{ "/assets/css/post.css" | relative_url }}',
-  '{{ "/assets/css/category-tag.css" | relative_url }}',
+  '{{ "/assets/css/category-event.css" | relative_url }}',
   '{{ "/assets/css/lib/bootstrap-toc.min.css" | relative_url }}',
 
   /*--- Javascripts ---*/
@@ -61,11 +61,11 @@ const include = [
     '{{ url }}',
   {% endfor %}
 
-  /* Trending tags */
-  {% include trending-tags.html %}
-  {% for tag in trending_tags %}
-    {% capture tag_url %}/tags/{{ tag | downcase | url_encode }}/{% endcapture %}
-    '{{ tag_url | relative_url }}',
+  /* Trending events */
+  {% include trending-events.html %}
+  {% for event in trending_events %}
+    {% capture event_url %}/events/{{ event | downcase | url_encode }}/{% endcapture %}
+    '{{ event_url | relative_url }}',
   {% endfor %}
 
   /*--- Icons ---*/

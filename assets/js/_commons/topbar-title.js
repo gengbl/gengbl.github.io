@@ -12,8 +12,8 @@ $(function() {
   var title = ($("div.post>h1").length > 0) ?
           $("div.post>h1").text().trim() : $("h1").text().trim();
 
-  if ($("#page-category").length || $("#page-tag").length) {
-    /* The title in Category or Tag page will be "<title> <count_of_posts>" */
+  if ($("#page-category").length || $("#page-event").length) {
+    /* The title in Category or Event page will be "<title> <count_of_posts>" */
     if (/\s/.test(title)) {
       title = title.replace(/[0-9]/g, "").trim();
     }

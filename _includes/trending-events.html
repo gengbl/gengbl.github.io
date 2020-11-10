@@ -1,0 +1,40 @@
+{% comment %}
+  The trending events list
+  v2.0
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2019 Cotes Chung
+  MIT Licensed
+{% endcomment %}
+
+{% assign MAX = 10 %}
+
+{% assign size_list = "" | split: "" %}
+{% assign event_list = "" | split: "" %}
+
+{% for event in site.events %}
+  {% assign size = event | last | size %}
+  {% assign size_list = size_list | push: size %}
+
+  {% assign event_str = event | first | replace: " ", "-" | append: "::" | append: size %}
+  {% assign event_list =  event_list | push: event_str %}
+{% endfor %}
+
+{% assign size_list = size_list | sort | reverse %}
+
+{% assign event_list = event_list | sort_natural %}
+
+{% assign trending_events = "" | split: "" %}
+
+{% for size in size_list limit: MAX %}
+  {% for event_str in event_list %}
+    {% assign event = event_str | split: "::" %}
+    {% assign event_name = event | first %}
+    {% assign event_size = event | last | plus: 0 %}
+    {% if event_size == size %}
+      {% unless trending_events contains event_name %}
+        {% assign trending_events = trending_events | push: event_name %}
+        {% break %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

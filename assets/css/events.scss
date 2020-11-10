@@ -1,5 +1,5 @@
 ---
-# Styles for Tab Tags
+# Styles for Tab Event
 # v2.0
 # https://github.com/cotes2020/jekyll-theme-chirpy
 # © 2019 Cotes Chung
@@ -9,14 +9,14 @@
 
 {% include_relative _addon/main.scss %}
 
-.tag {
+.event {
   border-radius: 0.7em;
   padding: 6px 8px 7px;
   margin-right: 0.8rem;
   line-height: 3rem;
   letter-spacing: 0;
-  border: 1px solid var(--tag-border) !important;
-  box-shadow: 0 0 3px 0 var(--tag-shadow);
+  border: 1px solid var(--event-border) !important;
+  box-shadow: 0 0 3px 0 var(--event-shadow);
   span {
     margin-left: 0.6em;
     font-size: 0.7em;

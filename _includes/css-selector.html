@@ -17,10 +17,10 @@
     <link rel="preload" href="{{ '/assets/css/categories.css' | relative_url }}" as="style">
     <link rel="stylesheet" href="{{ '/assets/css/categories.css' | relative_url }}">
 
-  {% elsif page.type == 'tags' %}
+  {% elsif page.type == 'events' %}
 
-    <link rel="preload" href="{{ '/assets/css/tags.css' | relative_url }}" as="style">
-    <link rel="stylesheet" href="{{ '/assets/css/tags.css' | relative_url }}">
+    <link rel="preload" href="{{ '/assets/css/events.css' | relative_url }}" as="style">
+    <link rel="stylesheet" href="{{ '/assets/css/events.css' | relative_url }}">
 
   {% elsif page.type == 'archives' %}
 
@@ -34,10 +34,10 @@
 
   {% endif %}
 
-{% elsif page.layout == 'category' or page.layout == 'tag' %}
+{% elsif page.layout == 'category' or page.layout == 'event' %}
 
-  <link rel="preload" href="{{ '/assets/css/category-tag.css' | relative_url }}" as="style">
-  <link rel="stylesheet" href="{{ '/assets/css/category-tag.css' | relative_url }}">
+  <link rel="preload" href="{{ '/assets/css/category-event.css' | relative_url }}" as="style">
+  <link rel="stylesheet" href="{{ '/assets/css/category-event.css' | relative_url }}">
 
 {% elsif page.layout == 'post' %}
 

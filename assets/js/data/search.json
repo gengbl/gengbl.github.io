@@ -8,7 +8,7 @@ layout: compress
     "title": "{{ post.title | escape }}",
     "url": "{{ site.baseurl }}{{ post.url }}",
     "categories": "{{ post.categories | join: ', '}}",
-    "tags": "{{ post.tags | join: ', ' }}",
+    "events": "{{ post.events | join: ', ' }}",
     "date": "{{ post.date }}",
     {% include no-linenos.html content=post.content %}
     "snippet": "{{ content | strip_html | strip_newlines | remove_chars | escape | truncate: 300 | replace: '\', '\\\\' }}"

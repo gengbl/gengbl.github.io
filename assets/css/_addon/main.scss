@@ -532,7 +532,7 @@ footer {
 }
 
 
-#access-tags {
+#access-events {
   > div.post-content > div {
     max-width: 80%;
   }
@@ -718,7 +718,7 @@ a {
   }
   .categories &,
   #page-category &,
-  #tags &,
+  #events &,
   #archives & {
     &:not(:hover) {
       @extend %no-bottom-border;
@@ -1127,7 +1127,7 @@ div.post-content .table-wrapper {
     padding: 0 1rem;
   }
 
-  #tags {
+  #events {
     -webkit-box-pack: center!important;
     -ms-flex-pack: center!important;
     justify-content: center!important;

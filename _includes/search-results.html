@@ -8,13 +8,13 @@
 <div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
   <div class="col-12 col-xl-11 post-content">
     <div id="search-hints">
-      <h4 class="text-muted mb-4">{{ site.data.label.panel.trending_tags }}</h4>
+      <h4 class="text-muted mb-4">{{ site.data.label.panel.trending_events }}</h4>
 
-      {% include trending-tags.html %}
+      {% include trending-events.html %}
 
-      {% for tag in trending_tags %}
-        {% capture url %}/tags/{{ tag | downcase | url_encode }}/{% endcapture %}
-        <a class="post-tag" href="{{ url | relative_url }}">{{ tag | replace: '-', ' ' }}</a>
+      {% for event in trending_events %}
+        {% capture url %}/events/{{ event | downcase | url_encode }}/{% endcapture %}
+        <a class="post-event" href="{{ url | relative_url }}">{{ event | replace: '-', ' ' }}</a>
       {% endfor %}
 
     </div>

@@ -1,5 +1,5 @@
 ---
-title: About
+title: 关于
 
 # The About page
 # v2.0
@@ -7,5 +7,4 @@ title: About
 # © 2017-2019 Cotes Chung
 # MIT License
 ---
-
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+墨行科技以科技为导向，以创新为目标，以人才为基础，向着最新最强的科技前进
