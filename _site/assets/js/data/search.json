@@ -1,1 +1,1 @@
-[ ]
+[ { "title": "event1", "url": "/posts/firstevent/", "categories": "", "events": "", "date": "2020-11-13 00:00:00 +0800", "snippet": "event 1" }, { "title": "article1", "url": "/posts/firstarticle/", "categories": "", "events": "", "date": "2020-11-12 00:00:00 +0800", "snippet": "event 1" } ]

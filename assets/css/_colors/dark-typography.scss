@@ -52,8 +52,8 @@
 
   /* Posts */
   --toc-highlight: rgb(116, 178, 243);
-  --tag-bg: rgb(41, 40, 40);
-  --tag-hover: rgb(43, 56, 62);
+  --event-bg: rgb(41, 40, 40);
+  --event-hover: rgb(43, 56, 62);
   --tb-odd-bg: rgba(42, 47, 53, 0.52); /* odd rows of the posts' table */
   --tb-even-bg: rgb(31, 31, 34); /* even rows of the posts' table */
   --tb-border-color: var(--tb-odd-bg);
@@ -65,7 +65,7 @@
   --card-border-color: rgb(53, 53, 60);
   --card-box-shadow: var(--main-wrapper-bg);
 
-  /* tags */
+  /* events */
   --event-border: rgb(59, 79, 88);
   --event-shadow: rgb(32, 33, 33);
   --search-event-bg: var(--event-bg);

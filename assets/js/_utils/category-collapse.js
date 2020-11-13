@@ -11,7 +11,7 @@ $(function() {
   var parentPrefix = "h_";
 
   /* close up top-category */
-  $(".collapse").on("hide.bs.collapse", function() { /* Bootstrap collapse events. */
+  $(".collapse").on("hide.bs.collapse", function() { /* Bootstrap collapse tags. */
     var parentId = parentPrefix + $(this).attr("id").substring(childPrefix.length);
     if (parentId) {
       $("#" + parentId + " .far.fa-folder-open").attr("class", "far fa-folder fa-fw");

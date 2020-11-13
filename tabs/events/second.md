@@ -1,5 +1,5 @@
 ---
-title: Event
+title: 事件2
 type: event
 # All the Event of posts.
 # v2.0

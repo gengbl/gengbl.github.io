@@ -1,0 +1,50 @@
+I"‘
+<div id="events" class="d-flex flex-wrap ml-xl-2 mr-xl-2">
+
+
+
+
+
+
+
+</div>
+
+<div id="events" class="pl-xl-2">
+
+  
+  
+  
+    
+    
+  <span class="lead">2020</span>
+  <ul class="list-unstyled">
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">13</span>
+        <span class="date month small text-muted">Nov</span>
+        <a href="/posts/firstevent/">event1</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">12</span>
+        <span class="date month small text-muted">Nov</span>
+        <a href="/posts/firstarticle/">article1</a>
+      </div>
+    </li>
+  
+  </ul>
+  
+
+</div>
+:ET

@@ -41,7 +41,7 @@ social:
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+google_site_verification: google_meta_event_verification # change to your verification string
 
 #--------------------------
 
@@ -128,11 +128,11 @@ defaults:
     scope:
       path: events
     values:
-      tab_active: Events
-      location: event 
+      tab_active: Events 
+      location: event
       breadcrumb:
         -
-          label: Home
+          label: 首页
           url: /
         -
           label: Events 
@@ -145,7 +145,7 @@ defaults:
       location: Category
       breadcrumb:
         -
-          label: Home
+          label: 首页
           url: /
         -
           label: Categories
@@ -158,7 +158,7 @@ defaults:
       dynamic_title: true    # Hide title in mobile screens.
       breadcrumb:
         -
-          label: Home
+          label: 首页
           url: /
 
 

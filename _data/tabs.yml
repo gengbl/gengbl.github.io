@@ -15,7 +15,7 @@
   url: categories
 -
   name: "大事记"
-  icon: "fas fa-events"
+  icon: "fas fa-tags"
   path: tabs
   url: events
 -

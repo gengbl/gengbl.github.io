@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Create HTML pages for Categories and Tags in posts.
+# Create HTML pages for Categories and Events in posts.
 #
 # Usage:
 #     Call from the '_posts' sibling directory.

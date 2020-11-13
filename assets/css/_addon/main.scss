@@ -360,11 +360,11 @@ $sidebar-display: "sidebar-display";
 
 #search-hints {
   display: none;
-  .post-tag {
+  .post-event {
     display: inline-block;
     line-height: 1rem;
     font-size: 1rem;
-    background: var(--search-tag-bg);
+    background: var(--search-event-bg);
     border: none;
     padding: 0.5rem;
     margin: 0 1rem 1rem 0;
@@ -536,7 +536,7 @@ footer {
   > div.post-content > div {
     max-width: 80%;
   }
-  .post-tag {
+  .post-event {
     display: inline-block;
     line-height: 1rem;
     font-size: 0.85rem;
@@ -867,15 +867,15 @@ div.post-content .table-wrapper {
   }// p
 }
 
-.tag:hover {
-  @extend %tag-hover;
+.event:hover {
+  @extend %event-hover;
 }
 
-.post-tag {
+.post-event {
   display: inline-block;
   min-width: 2rem;
   text-align: center;
-  background: var(--tag-bg);
+  background: var(--event-bg);
   border-radius: 0.3rem;
   padding: 0 .4rem;
   color: inherit;
@@ -885,7 +885,7 @@ div.post-content .table-wrapper {
   }
 
   &:hover {
-    @extend %tag-hover;
+    @extend %event-hover;
     border-bottom: none;
     text-decoration: none;
     color: #d2603a;

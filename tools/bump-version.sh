@@ -11,9 +11,9 @@ set -eu
 
 META_FILE="_data/meta.yml"
 
-_latest_tag="$(git describe --abbrev=0)"
+_latest_event="$(git describe --abbrev=0)"
 
-_version_field="version: $_latest_tag"
+_version_field="version: $_latest_event"
 
 if [[ ! -f $META_FILE ]]; then
   echo "name: Chirpy" > $META_FILE
@@ -24,5 +24,5 @@ fi
 
 if [[ -n $(git status $META_FILE -s) ]]; then
   git add $META_FILE
-  git commit -m "Bump version to $_latest_tag"
+  git commit -m "Bump version to $_latest_event"
 fi
